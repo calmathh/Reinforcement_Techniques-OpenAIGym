@@ -1,0 +1,12 @@
+Open AI gym is a gymnasium-API(Application Protocol Interface) which allows software to interact with each other-provides a visual environment(of taxi,cartpole,luna)
+These Environments created(*make) by the gym have an agent who performs a task(*step) and observes(*observation) his result-either a (*reward) or a punishment and is (*reset) for the next timestep
+So first the environmet is set(actually, reset) and then the agent takes a step which leads to an observation and a reward-either +/- but that does not signify the end, this action-observation exchange is called as a timestep
+- the end is when the goal is achieved(passenger dropped off/wtv done return=True) this marks the completion of one episode, episodes could also be programmed to end after certain no.of time steps latter being a for in range(n) loop and the former being a while not done: loop
+Action and Observation spaces are predefined for a specific environment, they can either be discrete or continuous box format or even tuple/dict format
+My first assignment is that of a taxi-pick up/drop enviromnet which has a predefined discrete action(6) and observation(500) space
+After every timestep the env.step() returns 5 members-observation state, reward, True/False(episode is done),another boolen and a dict
+so the timesteps in every episode would vary depending on how much it takes to finish the episode.. sometimes 1990 and sometimes 490 steps, after each step agent recieves a reward and after the the completion of episode, the rewards would accumulate into a score cummulatively for the episode
+terminology: reward-after each step, score-rewards accumulated after all timesteps(completion of episode)
+so episode ends when passenger dropped off which gives a reward of 20 so maximum rewards attained when episode ends-
+Refer to graphs below
+

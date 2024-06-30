@@ -11,3 +11,6 @@ In Monte Carlo- the q value is upadted after every episode, after each episode t
   G=gamma*reward+G
   (*updated*)q[state][action]=alpha*(G-q[state][action](*current*))
 So in both steps the q table is continuously updated/back traced and updated 
+Q-Learning Best Fit has been attached
+Monte Carlo took took too long to run and yet stuck at 0% shows memeory error since episodes are so huge and even if we reduce so(which would not help us veiw the bigger picture) but even so the timesteps per episode we cant control and may run upto 1290 and each being stored in an array would take up memory-but for the oomph of it i have attached it too...even for 5 episodes it takes way too long 
+tried converting episode data which was a list with tuple of state,reward,action for each timestep since that took a lot of memory make a list for each element of tuple yet it's taking up lot of memory
